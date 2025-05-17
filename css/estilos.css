@@ -1,0 +1,135 @@
+/* Reset y Fuentes */
+:root {
+  --primary: #2c3e50;     /* Azul oscuro profesional */
+  --secondary: #3498db;   /* Azul brillante */
+  --accent: #033038;      /* Rojo para énfasis */
+  --light: #ecf0f1;       /* Fondo claro */
+  --dark: #2c3e50;        /* Texto oscuro */
+  --gray: #95a5a6;        /* Gris para detalles */
+  --font-main: 'Roboto', sans-serif;
+  --font-title: 'Montserrat', sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-main);
+  line-height: 1.6;
+  color: var(--dark);
+  background-color: var(--light);
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Tipografía */
+h1 {
+  font-family: var(--font-title);
+  color: var(--primary);
+  margin: 30px 0 15px;
+  font-size: 2.2rem;
+  border-bottom: 3px solid var(--secondary);
+  padding-bottom: 10px;
+  text-transform: uppercase;
+}
+
+h2 {
+  font-weight: 400;
+  margin: 15px 0;
+  font-size: 1.2rem;
+  color: var(--dark);
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Lista de Objetivos */
+ul {
+  margin: 20px 0;
+  padding-left: 30px;
+}
+
+li {
+  margin: 10px 0;
+  padding: 10px;
+  background-color: white;
+  border-left: 4px solid var(--secondary);
+  list-style-type: none;
+  transition: transform 0.3s;
+}
+
+li:hover {
+  transform: translateX(10px);
+}
+
+/* Multimedia Responsivo */
+iframe, img {
+  width: 100%;
+  max-width: 800px;
+  height: auto;
+  min-height: 400px;
+  margin: 20px auto;
+  display: block;
+  border-radius: 8px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Efectos y Transiciones */
+h2, li, iframe, img {
+  transition: all 0.3s ease;
+}
+
+h2:hover {
+  box-shadow: 0 5px 15px rgba(52, 152, 219, 0.3);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 1.8rem;
+  }
+  
+  h2 {
+    font-size: 1rem;
+  }
+  
+  body {
+    padding: 10px;
+  }
+}
+
+/* Animación sutil para el título principal */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+h1:first-of-type {
+  animation: fadeIn 1s ease-out;
+  text-align: center;
+  color: var(--accent);
+  margin-top: 0;
+}
+
+/* Estilo para la imagen del Diagrama de Gantt */
+.gantt-image {
+    width: 100%;
+    max-width: 900px;
+    height: auto;
+    margin: 20px auto;
+    display: block;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    border: 1px solid #ddd;
+    transition: transform 0.3s;
+}
+
+.gantt-image:hover {
+    transform: scale(1.02);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
